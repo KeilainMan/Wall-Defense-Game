@@ -1,0 +1,685 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/shop/shop_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Kelly_Slab/KellySlab-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/shop/gold_coin.png" type="Texture" id=3]
+[ext_resource path="res://assets/shop/sho_placeholder_200.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -952.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 40
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 902.0
+margin_bottom = 1060.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+margin_right = 819.0
+margin_bottom = 1042.0
+rect_pivot_offset = Vector2( -752, -112 )
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_right = 252.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer3"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2"]
+margin_right = 212.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Health UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2"]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+margin_top = 41.0
+margin_right = 212.0
+margin_bottom = 241.0
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 212.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2/HBoxContainer"]
+margin_right = 208.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2/HBoxContainer"]
+margin_left = 212.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer3/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Health" type="Button" parent="ScrollContainer/GridContainer/MarginContainer3"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 272.0
+margin_right = 530.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer4"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2"]
+margin_right = 218.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Attack Speed UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 218.0
+margin_bottom = 241.0
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 218.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2/HBoxContainer"]
+margin_right = 214.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2/HBoxContainer"]
+margin_left = 218.0
+margin_right = 218.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer4/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Attack_Speed" type="Button" parent="ScrollContainer/GridContainer/MarginContainer4"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 550.0
+margin_right = 819.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer5"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2"]
+margin_right = 229.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Damage UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 229.0
+margin_bottom = 241.0
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 229.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2/HBoxContainer"]
+margin_right = 225.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2/HBoxContainer"]
+margin_left = 229.0
+margin_right = 229.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer5/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Damage" type="Button" parent="ScrollContainer/GridContainer/MarginContainer5"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer6" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_top = 354.0
+margin_right = 252.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer6"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+rect_pivot_offset = Vector2( -1232, -180 )
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2"]
+margin_right = 212.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Bullet Speed UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 212.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 212.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2/HBoxContainer"]
+margin_right = 208.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2/HBoxContainer"]
+margin_left = 212.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer6/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Bullet_Speed" type="Button" parent="ScrollContainer/GridContainer/MarginContainer6"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer7" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 272.0
+margin_top = 354.0
+margin_right = 530.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer7"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2"]
+margin_right = 218.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Bullet Size UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 218.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 218.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2/HBoxContainer"]
+margin_right = 214.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2/HBoxContainer"]
+margin_left = 218.0
+margin_right = 218.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer7/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Bullet_Size" type="Button" parent="ScrollContainer/GridContainer/MarginContainer7"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer8" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 550.0
+margin_top = 354.0
+margin_right = 819.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer8"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2"]
+margin_right = 229.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Bullet UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 229.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 229.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2/HBoxContainer"]
+margin_right = 225.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2/HBoxContainer"]
+margin_left = 229.0
+margin_right = 229.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer8/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Bullet_UP" type="Button" parent="ScrollContainer/GridContainer/MarginContainer8"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer9" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_top = 708.0
+margin_right = 252.0
+margin_bottom = 1042.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer9"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2"]
+margin_right = 212.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "+1 Bullet"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 212.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 212.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2/HBoxContainer"]
+margin_right = 208.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2/HBoxContainer"]
+margin_left = 212.0
+margin_right = 212.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer9/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="plus1_Bullet" type="Button" parent="ScrollContainer/GridContainer/MarginContainer9"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 232.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer10" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 272.0
+margin_top = 708.0
+margin_right = 530.0
+margin_bottom = 1042.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer10"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2"]
+margin_right = 218.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Attack Speed I"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 218.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 218.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2/HBoxContainer"]
+margin_right = 214.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2/HBoxContainer"]
+margin_left = 218.0
+margin_right = 218.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer10/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="ScrollContainer/GridContainer/MarginContainer10"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 238.0
+margin_bottom = 314.0
+flat = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/GridContainer"]
+margin_left = 550.0
+margin_top = 708.0
+margin_right = 819.0
+margin_bottom = 1042.0
+rect_clip_content = true
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer2"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2"]
+margin_right = 229.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 2 )
+text = "Attack Speed  UP"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2"]
+margin_top = 41.0
+margin_right = 229.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2"]
+margin_top = 245.0
+margin_right = 229.0
+margin_bottom = 294.0
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2/HBoxContainer"]
+margin_right = 225.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+text = "200"
+align = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2/HBoxContainer"]
+margin_left = 229.0
+margin_right = 229.0
+margin_bottom = 49.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+stretch_mode = 3
+alignment_horizontal = 2
+alignment_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScrollContainer/GridContainer/MarginContainer2/VBoxContainer2/HBoxContainer/AspectRatioContainer"]
+margin_left = -49.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="ScrollContainer/GridContainer/MarginContainer2"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 249.0
+margin_bottom = 314.0
+flat = true

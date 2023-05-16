@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/main_scene/healthbar_fill.png" type="Texture" id=1]
+[ext_resource path="res://assets/main_scene/healthbar_bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/main_scene/Health.png" type="Texture" id=3]
+
+[node name="Healthbarcontainer" type="HBoxContainer"]
+margin_right = 133.0
+margin_bottom = 25.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Herz" type="NinePatchRect" parent="."]
+margin_right = 25.0
+margin_bottom = 25.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+patch_margin_left = 25
+
+[node name="Healthbar" type="TextureProgress" parent="."]
+margin_left = 33.0
+margin_right = 183.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 150, 0 )
+value = 50.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
